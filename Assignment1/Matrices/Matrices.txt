@@ -1,0 +1,2 @@
+csc /out:Matrices.exe *.cs > build.log
+csc /target:library /out:Matrices.dll *Matrix*.cs >> build.log
