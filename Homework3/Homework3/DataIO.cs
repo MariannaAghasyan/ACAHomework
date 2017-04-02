@@ -16,7 +16,7 @@ namespace Homework3
         /// <returns>Student's list</returns>
         static public List<Student> DataInput()
         {
-            IEnumerable<String> text = File.ReadLines(@"data\Students.xls");
+            IEnumerable<String> text = File.ReadLines(@"Resources\Students.xls");
 
             List<Student> students = new List<Student>();
 
@@ -39,7 +39,7 @@ namespace Homework3
             {
                 text += st.ToString();
             }
-            File.WriteAllText(@"data\output.xls", text);
+            File.WriteAllText(@"Resources\output.xls", text);
         }
 
         /// <summary>
@@ -73,7 +73,7 @@ namespace Homework3
         /// <returns>Filter's list </returns>
         static public List<BaseFilter> FilterInput()
         {
-            IEnumerable<String> text = File.ReadLines(@"data\Filters.xls");
+            IEnumerable<String> text = File.ReadLines(@"Resources\Filters.xls");
 
             List<BaseFilter> filters = new List<BaseFilter>();
             String[][] currentRow = new String[5][];
@@ -103,7 +103,5 @@ namespace Homework3
 
             return filters;
         }
-
-
     }
 }
